@@ -8,6 +8,10 @@ One page registration form. Applying HTML form creation concepts.
 <img src="./screenshots/main.png" width=800>
 <img src="./screenshots/main2.png" width=800>
 
+### Link in Prod
+
+https://form-estrela-do-amanha.vercel.app/
+
 ### Notes
 
 1 - Layout Fix
@@ -73,6 +77,47 @@ input:focus, select:focus, textarea:focus, input[type="date"]:focus-within {
 
 ````
 
-### Link
+4 - State checkbox onFocus, onChecked, default in CSS.
+````css
+.checkbox-wrapper {
+    position: relative;
 
-https://form-estrela-do-amanha.vercel.app/
+    & [type="checkbox"] {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    .checkbox-image {
+        flex: 0 0 1.5rem;
+        height: 1.5rem;
+
+        background-image: url(../../assets/icons/checkbox-default.svg);
+    }
+
+    &:hover,
+    &:focus-within {
+        .checkbox-image {
+            background-image: url(../../assets/icons/checkbox-hover.svg);
+        }
+    }
+
+    &:has(:checked) .checkbox-image {
+        background-image: url(../../assets/icons/checkbox-checked.svg);
+    }
+}
+````
+
+## Colaboradores
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/79115354?v=4" width="100px;" alt="Foto de Lázaro Pimentel no GitHub"/><br>
+        <sub>
+          <b>Lázaro Pimentel</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
