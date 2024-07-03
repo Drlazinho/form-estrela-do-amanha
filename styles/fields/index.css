@@ -1,3 +1,5 @@
+@import url(droparea.css);
+
 input, textarea, select {
     /* remover os icones default dos fields */
     appearance: none; 
@@ -19,7 +21,7 @@ label {
      margin-bottom: .25rem;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus, select:focus, textarea:focus, input[type="date"]:focus-within {
     outline: .25rem solid var(--surface-secondary);
     border: .125rem solid var(--stroke-hightlight);
 
@@ -48,4 +50,22 @@ input[type="date"] {
 
 select {
     background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+}
+
+.address .flex {
+    gap: 1.25rem;
+
+}
+
+.input-wrapper:has([disabled]) {
+    opacity: .5;
+}
+
+input {
+    &[disabled] {
+        background-color: var(--surface-disabled);
+        border: 1px solid var(--stroke-default);
+
+        color: var(--text-primary);
+    }
 }
